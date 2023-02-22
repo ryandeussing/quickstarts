@@ -24,38 +24,38 @@ spec:
     - You are an Organization Administrator or have User Access administrator permissions
     - (Optional) Users in your organization
   description: |-
-    Limiting permissions for a service to a specific group of users 
+    Limiting permissions for a service to a specific group of users
   introduction: |-
     Welcome to the quick start for customizing user access in the Hybrid Cloud Console. 
-    
+
     In this quick start, you’ll configure granular administrative access for the Insights for Red Hat Enterprise Linux (RHEL) vulnerability service. 
-    
+
     This will allow only your team to perform administrative tasks with the vulnerability service, like viewing and remediating security CVEs on your RHEL systems, and generating vulnerability reports.
-    
+
     You can use this example workflow to customize access to any role within **User Access** and modify the **Default access** group.
   tasks:
     - title: Removing the Vulnerability administrator role from the **Default access** group
       description: |-
         Edit the **Default access** group and remove the roles that you don’t want all users to have. 
-        
+
         For this example, remove the **Vulnerability administrator** role from the **Default access** group to revoke this access from all users in your organization.
 
         1. Click the [Settings icon]{{highlight SettingsMenu}} to open **Settings**.
-        
+
         2. Click **User Access** > **Groups**.
-        
+
         3. Click the **Default access** group. (If you previously modified this group, it's called **Custom default access**.)
-        
+
         4. In the **Roles** tab, find the role that you want to remove from the group – in this case, **Vulnerability administrator**.
-        
+
         5. Next to **Vulnerability administrator**, click&nbsp;&nbsp;<i class="fas fa-ellipsis-v"></i> (more options) > **Remove** to revoke this permission from all users in your organization.
-        
+
         6. Click **Remove role** to confirm.
-        
+
         Users in your organization now no longer have **Vulnerability administrator** permissions by default. 
-        
+
         The **Default access** group is now called **Custom default access**, but any user-created group names have not changed. 
-        
+
         [You can undo any changes made to the **Default access** group by clicking **Restore to default** on the **Groups** page.]{{admonition note}}
       # optional - the task's Check your work module
       review:
@@ -67,7 +67,7 @@ spec:
     - title: Creating a new group and granting Vulnerability administrator permissions
       description: |-
         Create a new group with the **Vulnerability administrator** role, and assign specific team members to the group. Only the users in this group will have **Vulnerability administrator** permissions in your organization.
-        
+
         1. Click **Groups** > **Create group**.
         2. Enter a group name (for example, *Vulnerability Admins*) and description, and click **Next**.
         3. Add the **Vulnerability administrator** role to the group.
@@ -75,9 +75,9 @@ spec:
         4. Add the Organization Administrator and any members to the group that you want to have access. Select the checkboxes for those users and click **Next**.
             - You can quickly find users by filtering by username, email, or status.
         5. Review the group details and click **Submit** to create the group.
-        
+
         Now only the users in the *Vulnerability Admins* group have administrator permissions for the vulnerability service, but other users in your organization don't.
-        
+
         User access in the Hybrid Cloud Console is additive, meaning that each user has the default access permissions, plus permissions from any other groups they are assigned.
 
         After completing this quick start, the Organization Administrator now has all of the roles in these groups:
@@ -85,7 +85,7 @@ spec:
         - **Default access**
         - *Vulnerability admins*
 
-        To learn more, see the [User Access Configuration Guide for Role-based Access Control (RBAC)](https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2022/html/user_access_configuration_guide_for_role-based_access_control_rbac/index).
+        To learn more, see the [User Access Configuration Guide for Role-based Access Control (RBAC)](https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2023/html/user_access_configuration_guide_for_role-based_access_control_rbac/index).
       # optional - the task's Check your work module
       review:
         instructions: |-
@@ -100,10 +100,10 @@ spec:
     Congratulations! You have restricted administrative access to the vulnerability service to selected users.
 
     To grant additional permissions to your team, edit the group from **Groups** > *Vulnerability Admins* and add additional roles or users.
-    
+
     **Learn more:**
-      - See the [User Access Configuration Guide for Role-based Access Control (RBAC)](https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2022/html/user_access_configuration_guide_for_role-based_access_control_rbac/index) 
-      - See the [Red Hat Insights documentation](https://access.redhat.com/documentation/en-us/red_hat_insights/2022) for information about using the vulnerability service, including:
-          - [Assessing and Monitoring Security Vulnerabilities on RHEL Systems](https://access.redhat.com/documentation/en-us/red_hat_insights/2022/html-single/assessing_and_monitoring_security_vulnerabilities_on_rhel_systems/index)
-          - [Remediating Security Exposures Using the Vulnerability Service and Ansible Playbooks](https://access.redhat.com/documentation/en-us/red_hat_insights/2022/html-single/remediating_security_exposures_using_the_vulnerability_service_and_ansible_playbooks/index)
-          - [Generating Vulnerability Service Reports](https://access.redhat.com/documentation/en-us/red_hat_insights/2022/html-single/generating_vulnerability_service_reports/index) 
+      - See the [User Access Configuration Guide for Role-based Access Control (RBAC)](https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2023/html/user_access_configuration_guide_for_role-based_access_control_rbac/index) 
+      - See the [Red Hat Insights documentation](https://access.redhat.com/documentation/en-us/red_hat_insights) for information about using the vulnerability service, including:
+          - [Assessing and Monitoring Security Vulnerabilities on RHEL Systems](https://access.redhat.com/documentation/en-us/red_hat_insights/2023/html-single/assessing_and_monitoring_security_vulnerabilities_on_rhel_systems/index)
+          - [Remediating Security Exposures Using the Vulnerability Service and Ansible Playbooks](https://access.redhat.com/documentation/en-us/red_hat_insights/2023/html-single/remediating_security_exposures_using_the_vulnerability_service_and_ansible_playbooks/index)
+          - [Generating Vulnerability Service Reports](https://access.redhat.com/documentation/en-us/red_hat_insights/2023/html-single/generating_vulnerability_service_reports/index)
